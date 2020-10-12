@@ -1,6 +1,6 @@
 # Probabilistic Linear Solvers for Machine Learning
 
-This repository contains additional resources such as experiments for the paper ["Probabilistic Linear Solvers for Machine Learning"]() by Jonathan Wenger and Philipp Hennig published at NeurIPS 2020.
+This repository contains additional resources such as experiments and data for the paper ["Probabilistic Linear Solvers for Machine Learning"]() by Jonathan Wenger and Philipp Hennig published at NeurIPS 2020.
 
 ## Abstract
 
@@ -41,7 +41,7 @@ git clone git@github.com:JonathanWenger/probabilistic-linear-solvers-for-ml.git
 cd probabilistic-linear-solvers-for-ml
 ```
 
-### Plots and Illustrations
+#### Plots and Illustrations
 
 Jupyter notebooks reproducing plots and illustrations can be found in `./experiments/notebooks`. Simply install Jupyter and run the notebooks.
 
@@ -50,14 +50,14 @@ pip install jupyter
 jupyter notebook
 ```
 
-### Calibration Experiments
+#### Calibration Experiments
 Calibration experiments performed using the [flight dataset from January 2020](/data/kernel_matrix_inversion/flight_delay_jan2020.zip) can be run in the following way. 
 
 ```bash
 python experiments/scripts/kernel_matrix_inversion.py
 ```
 
-### Galerkin's Method
+#### Galerkin's Method
 
 To apply the probabilistic linear solver to a discretization of a partial differential equation begin by running the associated notebook. To regenerate the mesh and resulting linear system using [FeNiCS](https://fenicsproject.org/) run:
 
