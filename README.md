@@ -7,7 +7,7 @@ This repository contains experiments and additional resources for the paper ["Pr
 Linear systems are the bedrock of virtually all numerical computation. Machine learning poses specific challenges for the solution of such systems due to their scale, characteristic structure, stochasticity and the central role of uncertainty in the field. Unifying earlier work we propose a class of probabilistic linear solvers which jointly infer the matrix, its inverse, and the solution from matrix-vector product observations. This class emerges from a fundamental set of desiderata which constrains the space of possible algorithms and recovers the method of conjugate gradients under certain conditions. We demonstrate how to incorporate prior spectral information in order to calibrate uncertainty and experimentally showcase the potential of such solvers for machine learning.
 
 
-<img align="left" src="https://raw.githubusercontent.com/JonathanWenger/probabilistic-linear-solvers-for-ml/tree/main/figures/PLS_illustration.png" alt="PLS illustration" width="512" style="padding-right: 10px; padding left: 10px;" title="Illustration of a Probabilistic Linear Solver"/>
+<img align="left" src="https://raw.githubusercontent.com/JonathanWenger/probabilistic-linear-solvers-for-ml/main/figures/PLS_illustration.png" alt="PLS illustration" width="512" style="padding-right: 10px; padding left: 10px;" title="Illustration of a Probabilistic Linear Solver"/>
 
 
 
