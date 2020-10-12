@@ -1,8 +1,8 @@
 # Probabilistic Linear Solvers for Machine Learning
 
 [![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg?style=flat)](https://arxiv.org/abs/1234.56789)
-[![ProbNum](https://img.shields.io/readthedocs/probnum.svg?logo=github&logoColor=white&label=ProbNum)](https://github.com/probabilistic-numerics/probnum)
-[![ProbNum Docs](https://img.shields.io/readthedocs/probnum.svg?logo=read%20the%20docs&logoColor=white&label=ProbNum%20Docs)](https://probnum.readthedocs.io)
+[![ProbNum](https://img.shields.io/readthedocs/probnum.svg?logo=github&logoColor=white&label=ProbNum&message=Code%20Repo)](https://github.com/probabilistic-numerics/probnum)
+[![ProbNum Docs](https://img.shields.io/readthedocs/probnum.svg?logo=read%20the%20docs&logoColor=white&label=ProbNum&message=Docs&color=blue)](https://probnum.readthedocs.io)
 
 This repository contains additional resources such as experiments and data for the paper [Probabilistic Linear Solvers for Machine Learning]() by [Jonathan Wenger](https://jonathanwenger.netlify.app/) and [Philipp Hennig](https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/methoden-des-maschinellen-lernens/personen/philipp-hennig/) published at NeurIPS 2020.
 
