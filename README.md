@@ -7,7 +7,7 @@ This repository contains additional resources such as experiments for the paper 
 Linear systems are the bedrock of virtually all numerical computation. Machine learning poses specific challenges for the solution of such systems due to their scale, characteristic structure, stochasticity and the central role of uncertainty in the field. Unifying earlier work we propose a class of probabilistic linear solvers which jointly infer the matrix, its inverse, and the solution from matrix-vector product observations. This class emerges from a fundamental set of desiderata which constrains the space of possible algorithms and recovers the method of conjugate gradients under certain conditions. We demonstrate how to incorporate prior spectral information in order to calibrate uncertainty and experimentally showcase the potential of such solvers for machine learning.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/JonathanWenger/probabilistic-linear-solvers-for-ml/main/figures/PLS_illustration.png" alt="PLS Illustration" width="700"/>
+  <img src="https://raw.githubusercontent.com/JonathanWenger/probabilistic-linear-solvers-for-ml/main/figures/PLS_illustration.png" alt="PLS Illustration" width="900"/>
 </p>
 
 
@@ -33,13 +33,14 @@ To get started check out the [tutorials](https://probnum.readthedocs.io/en/lates
 
 ## Experiments
 
-You can reproduce all experiments and plots shown in the paper in the following way. Notebooks producing plots and illustrations can be found in `/notebooks`. Calibration experiments performed using the [flight dataset from January 2020]() can be run by executing
+You can reproduce all experiments and plots shown in the paper in the following way. Notebooks producing plots and illustrations can be found in `/notebooks`. Calibration experiments performed using the [flight dataset from January 2020](/data/kernel_matrix_inversion/flight_delay_jan020.zip) can be run by executing
 
 ```python
 
 ```
 
-## Publication
+## Citation
+
 If you use this work in your research, please cite the associated paper:
 
 _"Probabilistic Linear Solvers for Machine Learning"_ ([PDF]()), Jonathan Wenger and Philipp Hennig
