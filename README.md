@@ -1,6 +1,6 @@
 # Probabilistic Linear Solvers for Machine Learning
 
-This repository contains experiments and additional resources for the paper ["Probabilistic Linear Solvers for Machine Learning"]() (Jonathan Wenger and Philipp Hennig) published at NeurIPS 2020.
+This repository contains additional resources such as experiments for the paper ["Probabilistic Linear Solvers for Machine Learning"]() by Jonathan Wenger and Philipp Hennig published at NeurIPS 2020.
 
 ## Abstract
 
@@ -13,7 +13,7 @@ Linear systems are the bedrock of virtually all numerical computation. Machine l
 
 ## Implementation
 
-An implementation of our method is available as part of <a href="https://github.com/probabilistic-numerics/probnum"><b>ProbNum</b></a>.
+An open-source implementation of our method is available as part of <a href="https://github.com/probabilistic-numerics/probnum"><b>ProbNum</b></a>.
 
 ---
 
