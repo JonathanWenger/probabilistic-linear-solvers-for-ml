@@ -4,7 +4,7 @@ This repository contains experiments and additional resources for the paper ["Pr
 
 ## Abstract
 
-Linear systems are the bedrock of virtually all numerical computation. Machine learning poses specific challenges for the solution of such systems due to their scale, characteristic structure, stochasticity and the central role of uncertainty in the field. Unifying earlier work we propose a class of probabilistic linear solvers which jointly infer the matrix, its inverse, and the solution from matrix-vector product observations. This class emerges from a fundamental set of desiderata which constrains the space of possible algorithms and recovers the method of conjugate gradients under certain conditions. We demonstrate how to incorporate prior spectral information in order to calibrate uncertainty and experimentally showcase the potential of such solvers for machine learning.
+> Linear systems are the bedrock of virtually all numerical computation. Machine learning poses specific challenges for the solution of such systems due to their scale, characteristic structure, stochasticity and the central role of uncertainty in the field. Unifying earlier work we propose a class of probabilistic linear solvers which jointly infer the matrix, its inverse, and the solution from matrix-vector product observations. This class emerges from a fundamental set of desiderata which constrains the space of possible algorithms and recovers the method of conjugate gradients under certain conditions. We demonstrate how to incorporate prior spectral information in order to calibrate uncertainty and experimentally showcase the potential of such solvers for machine learning.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/JonathanWenger/probabilistic-linear-solvers-for-ml/main/figures/PLS_illustration.png" alt="PLS Illustration" width="700"/>
@@ -13,15 +13,17 @@ Linear systems are the bedrock of virtually all numerical computation. Machine l
 
 ## Implementation
 
-An implementation of our method is available as part of ProbNum
+An implementation of our method is available as part of <a href="https://github.com/probabilistic-numerics/probnum"><b>ProbNum</b></a>.
 
-<a href="https://probnum.readthedocs.io"><img align="left" src="https://raw.githubusercontent.com/probabilistic-numerics/probnum/master/docs/source/img/pn_logo.png" alt="probabilistic numerics" width="128" style="padding-right: 10px; padding left: 10px;" title="Probabilistic Numerics on GitHub"/></a>
-<div style="text-align:center">   
-  <a href="https://github.com/JonathanWenger/probabilistic-numerics/probnum">ProbNum</a>
-  <!-- more links here -->
-</div>
+---
 
-a Python framework for probabilistic numerics. You can install ProbNum using from the Python package index via
+<a href="https://probnum.readthedocs.io"><img align="left" src="https://raw.githubusercontent.com/probabilistic-numerics/probnum/master/docs/source/img/pn_logo.png" alt="probabilistic numerics" width="64" style="padding-right: 10px; padding left: 10px;" title="Probabilistic Numerics in Python"/></a>**ProbNum implements probabilistic numerical methods in Python.** Such methods solve numerical problems from linear
+algebra, optimization, quadrature and differential equations using _probabilistic inference_. This approach captures 
+uncertainty arising from _finite computational resources_ and _stochastic input_. 
+
+---
+
+You can install ProbNum using from the Python package index via
 
 ```bash
 pip install probnum
