@@ -17,7 +17,7 @@ An open-source implementation of our method is available as part of <a href="htt
 
 ---
 
-<a href="https://probnum.readthedocs.io"><img align="left" src="https://raw.githubusercontent.com/probabilistic-numerics/probnum/master/docs/source/img/pn_logo.png" alt="probabilistic numerics" width="120" style="padding-right: 5px; padding left: 5px;" title="Probabilistic Numerics in Python"/></a>**ProbNum implements probabilistic numerical methods in Python.** Such methods solve numerical problems from linear
+<a href="https://github.com/probabilistic-numerics/probnum"><img align="left" src="https://raw.githubusercontent.com/probabilistic-numerics/probnum/master/docs/source/img/pn_logo.png" alt="probabilistic numerics" width="120" style="padding-right: 5px; padding left: 5px;" title="Probabilistic Numerics in Python"/></a>**ProbNum implements probabilistic numerical methods in Python.** Such methods solve numerical problems from linear
 algebra, optimization, quadrature and differential equations using _probabilistic inference_. This approach captures 
 uncertainty arising from _finite computational resources_ and _stochastic input_. 
 
@@ -33,11 +33,39 @@ To get started check out the [tutorials](https://probnum.readthedocs.io/en/lates
 
 ## Experiments
 
-You can reproduce all experiments and plots shown in the paper with ProbNum v0.1.2. Notebooks producing plots and illustrations can be found in `/notebooks`. Calibration experiments performed using the [flight dataset from January 2020](/data/kernel_matrix_inversion/flight_delay_jan2020.zip) can be run by executing
+You can reproduce all experiments and plots shown in the paper with ProbNum v0.1.2.
 
-```python
-
+```bash
+pip install probnum==0.1.2
+git clone git@github.com:JonathanWenger/probabilistic-linear-solvers-for-ml.git
+cd probabilistic-linear-solvers-for-ml
 ```
+
+### Plots and Illustrations
+
+Jupyter notebooks reproducing plots and illustrations can be found in `./experiments/notebooks`. Simply install Jupyter and run the notebooks.
+
+```bash
+pip install jupyter
+jupyter notebook
+```
+
+### Calibration Experiments
+Calibration experiments performed using the [flight dataset from January 2020](/data/kernel_matrix_inversion/flight_delay_jan2020.zip) can be run in the following way. 
+
+```bash
+python experiments/scripts/kernel_matrix_inversion.py
+```
+
+### Galerkin's Method
+
+To apply the probabilistic linear solver to a discretization of a partial differential equation begin by running the associated notebook. To regenerate the mesh and resulting linear system using [FeNiCS](https://fenicsproject.org/) run:
+
+```bash
+pip install fenics
+python experiments/scripts/poisson_pde.py
+```
+
 
 ## Citation
 
