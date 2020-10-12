@@ -23,17 +23,17 @@ uncertainty arising from _finite computational resources_ and _stochastic input_
 
 ---
 
-You can install ProbNum using from the Python package index via:
+You can install ProbNum from the Python package index via:
 
 ```bash
-pip install probnum==0.1.2
+pip install probnum
 ``` 
 
 To get started check out the [tutorials](https://probnum.readthedocs.io/en/latest/tutorials/linear_algebra.html) on how to use the probabilistic linear solver within ProbNum and the [API documentation](https://probnum.readthedocs.io/en/latest/automod/probnum.linalg.problinsolve.html#probnum.linalg.problinsolve).
 
 ## Experiments
 
-You can reproduce all experiments and plots shown in the paper in the following way. Notebooks producing plots and illustrations can be found in `/notebooks`. Calibration experiments performed using the [flight dataset from January 2020](/data/kernel_matrix_inversion/flight_delay_jan2020.zip) can be run by executing
+You can reproduce all experiments and plots shown in the paper with ProbNum v0.1.2. Notebooks producing plots and illustrations can be found in `/notebooks`. Calibration experiments performed using the [flight dataset from January 2020](/data/kernel_matrix_inversion/flight_delay_jan2020.zip) can be run by executing
 
 ```python
 
@@ -43,7 +43,7 @@ You can reproduce all experiments and plots shown in the paper in the following 
 
 If you use this work in your research, please cite the associated paper:
 
-_"Probabilistic Linear Solvers for Machine Learning"_ ([PDF]()), Jonathan Wenger and Philipp Hennig
+Jonathan Wenger and Philipp Hennig. Probabilistic Linear Solvers for Machine Learning. *In Advances in Neural Information Processing Systems (NeurIPS)*, 2020
 
 ```bibtex
 @incollection{wenger2020problinsolve,
