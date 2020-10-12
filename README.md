@@ -43,7 +43,7 @@ You can reproduce all experiments and plots shown in the paper with ProbNum v0.1
 
 If you use this work in your research, please cite the associated paper:
 
-Jonathan Wenger and Philipp Hennig. Probabilistic Linear Solvers for Machine Learning. *In Advances in Neural Information Processing Systems (NeurIPS)*, 2020
+> Jonathan Wenger and Philipp Hennig. Probabilistic Linear Solvers for Machine Learning. *In Advances in Neural Information Processing Systems (NeurIPS)*, 2020
 
 ```bibtex
 @incollection{wenger2020problinsolve,
