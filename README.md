@@ -8,8 +8,15 @@ Linear systems are the bedrock of virtually all numerical computation. Machine l
 
 
 <p align="center">
-  <img src="https://github.com/JonathanWenger/probabilistic-linear-solvers-for-ml/figures/PLS_illustration.pdf" alt="PLS illustration"/>
+  <img src="https://github.com/JonathanWenger/probabilistic-linear-solvers-for-ml/blob/main/figures/PLS_illustration.pdf" alt="PLS illustration"/>
 </p>
+
+<object data="https://github.com/JonathanWenger/probabilistic-linear-solvers-for-ml/blob/main/figures/PLS_illustration.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/JonathanWenger/probabilistic-linear-solvers-for-ml/blob/main/figures/PLS_illustration.pdf">
+        <p>This browser does not support PDFs. You can find an illustration of the PLS here: <a href="https://github.com/JonathanWenger/probabilistic-linear-solvers-for-ml/blob/main/figures/PLS_illustration.pdf">PLS Illustration</a>.</p>
+    </embed>
+</object>
+
 
 
 ## Implementation
