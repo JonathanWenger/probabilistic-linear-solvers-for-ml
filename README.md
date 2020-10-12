@@ -43,7 +43,7 @@ cd probabilistic-linear-solvers-for-ml
 
 #### Plots and Illustrations
 
-Jupyter notebooks reproducing plots and illustrations can be found in `./experiments/notebooks`. Simply install Jupyter and run the notebooks.
+Jupyter notebooks reproducing plots and illustrations are located in `./experiments/notebooks`. Simply install Jupyter and run the notebooks.
 
 ```bash
 pip install jupyter
@@ -51,7 +51,7 @@ jupyter notebook
 ```
 
 #### Calibration Experiments
-Calibration experiments performed using the [flight dataset from January 2020](/data/kernel_matrix_inversion/flight_delay_jan2020.zip) can be run in the following way. 
+Calibration experiments performed using the [flight delay dataset](/data/kernel_matrix_inversion/flight_delay_jan2020.zip) from January 2020 can be run in the following way. 
 
 ```bash
 python experiments/scripts/kernel_matrix_inversion.py
