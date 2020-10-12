@@ -2,7 +2,7 @@
 
 [![arXiv](https://img.shields.io/static/v1?logo=arxiv&logoColor=white&label=Preprint&message=1234.56789&color=B31B1B)](https://arxiv.org/abs/1234.56789)
 [![NeurIPS](https://img.shields.io/static/v1?logo=material-design-icons&logoColor=white&label=NeurIPS&message=Proceedings&color=67458A)]()
-[![ProbNum](https://img.shields.io/static/v1?logo=github&logoColor=white&label=ProbNum&message=Code&color=107d79)
+[![ProbNum](https://img.shields.io/static/v1?logo=github&logoColor=white&label=ProbNum&message=Code&color=107d79)](https://github.com/probabilistic-numerics/probnum)
 [![ProbNum](https://img.shields.io/static/v1?message=Docs&logo=read%20the%20docs&logoColor=white&label=ProbNum&color=blue)](https://probnum.readthedocs.io)
 
 This repository contains additional resources such as experiments and data for the paper [Probabilistic Linear Solvers for Machine Learning]() by [Jonathan Wenger](https://jonathanwenger.netlify.app/) and [Philipp Hennig](https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/methoden-des-maschinellen-lernens/personen/philipp-hennig/) published at NeurIPS 2020.
