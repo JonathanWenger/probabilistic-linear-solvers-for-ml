@@ -76,7 +76,7 @@ python experiments/scripts/poisson_pde.py
 
 ## Citation
 
-If you use this work in your research, please cite the associated paper:
+If you use this work in your research, please cite our paper:
 
 > Jonathan Wenger and Philipp Hennig. Probabilistic Linear Solvers for Machine Learning. *In Advances in Neural Information Processing Systems (NeurIPS)*, 2020
 
@@ -90,3 +90,9 @@ If you use this work in your research, please cite the associated paper:
   url           = {https://github.com/JonathanWenger/probabilistic-numerics/probnum}
 }
 ```
+
+## Acknowledgements
+
+The authors gratefully acknowledge financial support by the European Research Council through ERC StG Action 757275 / PANAMA; the DFG Cluster of Excellence "Machine Learning - New Perspectives for Science", EXC 2064/1, project number 390727645; the German Federal Ministry of Education and Research (BMBF) through the Tübingen AI Center (FKZ: 01IS18039A); and funds from the Ministry of Science, Research and Arts of the State of Baden-Württemberg.
+
+JW is grateful to the International Max Planck Research School for Intelligent Systems (IMPRS-IS) for support.
