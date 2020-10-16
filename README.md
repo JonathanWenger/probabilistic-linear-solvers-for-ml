@@ -40,10 +40,10 @@ To get started check out the [tutorials](https://probnum.readthedocs.io/en/lates
 
 ## Experiments
 
-You can reproduce all experiments and plots shown in the paper using ProbNum v0.1.2.
+You can reproduce all experiments and plots shown in the paper using ProbNum v0.1.1.
 
 ```bash
-pip install probnum==0.1.2
+pip install probnum==0.1.1
 git clone git@github.com:JonathanWenger/probabilistic-linear-solvers-for-ml.git
 cd probabilistic-linear-solvers-for-ml
 ```
