@@ -90,7 +90,7 @@ If you use this work in your research, please cite our paper:
 @incollection{wenger2020problinsolve,
   author        = {Jonathan Wenger and Philipp Hennig},
   title         = {Probabilistic Linear Solvers for Machine Learning},
-  booktitle 	= {Advances in Neural Information Processing Systems (NeurIPS)}
+  booktitle 	= {Advances in Neural Information Processing Systems (NeurIPS)},
   year          = {2020},
   keywords      = {probabilistic numerics, numerical linear algebra, machine learning},
   url           = {https://github.com/JonathanWenger/probabilistic-linear-solvers-for-ml}
