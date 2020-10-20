@@ -5,7 +5,7 @@
 [![ProbNum](https://img.shields.io/static/v1?logo=github&logoColor=white&label=ProbNum&message=Code&color=107d79)](https://github.com/probabilistic-numerics/probnum)
 [![ProbNum](https://img.shields.io/static/v1?message=Docs&logo=read%20the%20docs&logoColor=white&label=ProbNum&color=blue)](https://probnum.readthedocs.io)
 
-This repository contains additional resources such as experiments and data for the paper [Probabilistic Linear Solvers for Machine Learning]() by [Jonathan Wenger](https://jonathanwenger.netlify.app/) and [Philipp Hennig](https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/methoden-des-maschinellen-lernens/personen/philipp-hennig/) published at NeurIPS 2020.
+This repository contains additional resources such as experiments and data for the paper [Probabilistic Linear Solvers for Machine Learning](https://arxiv.org/abs/2010.09691) by [Jonathan Wenger](https://jonathanwenger.netlify.app/) and [Philipp Hennig](https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/methoden-des-maschinellen-lernens/personen/philipp-hennig/) published at NeurIPS 2020.
 
 ---
 
@@ -90,9 +90,9 @@ If you use this work in your research, please cite our paper:
 @incollection{wenger2020problinsolve,
   author        = {Jonathan Wenger and Philipp Hennig},
   title         = {Probabilistic Linear Solvers for Machine Learning},
-  booktitle 	= {Advances in Neural Information Processing Systems 33}
+  booktitle 	= {Advances in Neural Information Processing Systems (NeurIPS)}
   year          = {2020},
-  keywords      = {probabilistic numerics, linear algebra, machine learning},
+  keywords      = {probabilistic numerics, numerical linear algebra, machine learning},
   url           = {https://github.com/JonathanWenger/probabilistic-numerics/probnum}
 }
 ```
