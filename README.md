@@ -1,7 +1,7 @@
 # Probabilistic Linear Solvers for Machine Learning
 
 [![arXiv](https://img.shields.io/static/v1?logo=arxiv&logoColor=white&label=Preprint&message=2010.09691&color=B31B1B)](https://arxiv.org/abs/2010.09691)
-[![NeurIPS](https://img.shields.io/static/v1?logo=material-design-icons&logoColor=white&label=NeurIPS&message=Proceedings&color=67458A)]()
+[![NeurIPS](https://img.shields.io/static/v1?logo=material-design-icons&logoColor=white&label=NeurIPS&message=Proceedings&color=67458A)](https://papers.nips.cc/)
 [![ProbNum](https://img.shields.io/static/v1?logo=github&logoColor=white&label=ProbNum&message=Code&color=107d79)](https://github.com/probabilistic-numerics/probnum)
 [![ProbNum](https://img.shields.io/static/v1?message=Docs&logo=read%20the%20docs&logoColor=white&label=ProbNum&color=blue)](https://probnum.readthedocs.io)
 
