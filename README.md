@@ -93,7 +93,7 @@ If you use this work in your research, please cite our paper:
   booktitle 	= {Advances in Neural Information Processing Systems (NeurIPS)}
   year          = {2020},
   keywords      = {probabilistic numerics, numerical linear algebra, machine learning},
-  url           = {https://github.com/JonathanWenger/probabilistic-numerics/probnum}
+  url           = {https://github.com/JonathanWenger/probabilistic-linear-solvers-for-ml}
 }
 ```
 
