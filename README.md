@@ -72,12 +72,20 @@ All calibration strategies reduced overconfidence of the solver for the evaluate
 
 #### Galerkin's Method
 
-To apply the probabilistic linear solver to a discretization of a partial differential equation begin by running the associated notebook. To regenerate the mesh and resulting linear system using [FeNiCS](https://fenicsproject.org/) run:
+To apply the probabilistic linear solver to a discretization of a partial differential equation begin by generating the mesh and resulting linear system via Galerkin's method. To do so install [FeNiCS](https://fenicsproject.org/) following these [instructions](https://fenicsproject.org/download/). On Ubuntu you can simply install from the package management system.
+```bash
+sudo apt-get install fenics
+```
+
+You can now generate the coarse and fine meshes for the Dirichlet equation and associated linear systems via:
 
 ```bash
-pip install fenics
-python experiments/scripts/poisson_pde.py
+cd experiments/scripts
+python poisson_pde.py -r 6
+python poisson_pde.py -r 128
 ```
+
+Now run the associated Jupyter notebook in `./experiments/notebooks` to apply the probabilistic linear solver to the resulting system.
 
 
 ## Citation

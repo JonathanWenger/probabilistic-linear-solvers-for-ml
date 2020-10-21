@@ -37,10 +37,12 @@ def load_dataset(file):
     data : np.ndarray, shape=(n,p)
     """
     # Load csv
-    df = pd.read_csv(filepath_or_buffer=file, compression='zip', header=0, sep=',', quotechar='"')
+    df = pd.read_csv(
+        filepath_or_buffer=file, compression="zip", header=0, sep=",", quotechar='"'
+    )
 
     # Drop unnamed columns and remove NaNs
-    df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
+    df = df.loc[:, ~df.columns.str.contains("^Unnamed")]
     df = df.dropna()
     X = df.to_numpy(dtype=float)
 
@@ -124,7 +126,9 @@ def compute_test_statistic(x_true, x_est, trace_solution_cov):
     """
     error = x_true.ravel() - x_est.ravel()
     error_2_norm = np.linalg.norm(error, ord=2)
-    return 0.5 * np.log(np.maximum(trace_solution_cov, 10 ** -16)) - np.log(error_2_norm)
+    return 0.5 * np.log(np.maximum(trace_solution_cov, 10 ** -16)) - np.log(
+        error_2_norm
+    )
 
 
 def main(args):
@@ -150,8 +154,12 @@ def main(args):
     data = load_dataset(file=args.file_data)
 
     # Output table
-    df_teststats = pd.DataFrame(columns=["kernel", "dimension", "n_iters", "calibrated", "statistic", "sample"])
-    df_stat_dist = pd.DataFrame(columns=["kernel", "dimension", "calib_method", "stat_avg", "stat_std"])
+    df_teststats = pd.DataFrame(
+        columns=["kernel", "dimension", "n_iters", "calibrated", "statistic", "sample"]
+    )
+    df_stat_dist = pd.DataFrame(
+        columns=["kernel", "dimension", "calib_method", "stat_avg", "stat_std"]
+    )
 
     # Sample data and compute Gram matrices for a given kernel and number of data points
     _logger.debug("Solving linear systems.")
@@ -165,7 +173,9 @@ def main(args):
                 # Sample linear problem
                 print(f"Sample linear problem {n + 1}/{n_samples[i]}.")
                 sigma = 10 ** -6 * d
-                x_true, kernel_mat, b = generate_linear_system(data=data, kernel=kernel, n_datapoints=d, sigma=sigma)
+                x_true, kernel_mat, b = generate_linear_system(
+                    data=data, kernel=kernel, n_datapoints=d, sigma=sigma
+                )
 
                 # Compute spectrum
                 k_iter = 0
@@ -189,13 +199,18 @@ def main(args):
                     # Solve linear system with PLS without calibration
                     print("Solve linear system.")
                     try:
-                        xhat, _, _, info = probnum.linalg.problinsolve(A=kernel_mat, b=b, calibration=calib_mode)
+                        xhat, _, _, info = probnum.linalg.problinsolve(
+                            A=kernel_mat, b=b, calibration=calib_mode
+                        )
                         k_iter = info["iter"]
                         print(info)
 
                         # Compute test statistic testing for calibration
-                        test_statistic = compute_test_statistic(x_true=x_true, x_est=xhat.mean(),
-                                                                trace_solution_cov=info["trace_sol_cov"])
+                        test_statistic = compute_test_statistic(
+                            x_true=x_true,
+                            x_est=xhat.mean(),
+                            trace_solution_cov=info["trace_sol_cov"],
+                        )
                     except np.linalg.LinAlgError:
                         test_statistic = np.nan
                         k_iter = 0
@@ -204,8 +219,10 @@ def main(args):
 
                     # Append to dataframe
                     to_append = [kernel, d, k_iter, calib_method, test_statistic, n]
-                    df_teststats = df_teststats.append(pd.Series(to_append, index=df_teststats.columns),
-                                                       ignore_index=True)
+                    df_teststats = df_teststats.append(
+                        pd.Series(to_append, index=df_teststats.columns),
+                        ignore_index=True,
+                    )
 
             # Compute statistical distance
             avg_test_statistics = np.nanmean(test_stats_tmp, axis=0)
@@ -213,16 +230,26 @@ def main(args):
 
             # Append to dataframe
             for i_calib_method, calib_method in enumerate(args.calib_methods):
-                to_append = [kernel, d, calib_method, avg_test_statistics[i_calib_method],
-                             std_test_statistics[i_calib_method]]
-                df_stat_dist = df_stat_dist.append(pd.Series(to_append, index=df_stat_dist.columns),
-                                                   ignore_index=True)
+                to_append = [
+                    kernel,
+                    d,
+                    calib_method,
+                    avg_test_statistics[i_calib_method],
+                    std_test_statistics[i_calib_method],
+                ]
+                df_stat_dist = df_stat_dist.append(
+                    pd.Series(to_append, index=df_stat_dist.columns), ignore_index=True
+                )
 
         # Write result to file
         _logger.debug("Writing result to file.")
         Path(args.file_out).mkdir(parents=True, exist_ok=True)
-        df_teststats.to_csv(path_or_buf=os.path.join(args.file_out, "kernel_mat_inv_teststats.csv"))
-        df_stat_dist.to_csv(path_or_buf=os.path.join(args.file_out, "kernel_mat_inv_table.csv"))
+        df_teststats.to_csv(
+            path_or_buf=os.path.join(args.file_out, "kernel_mat_inv_teststats.csv")
+        )
+        df_stat_dist.to_csv(
+            path_or_buf=os.path.join(args.file_out, "kernel_mat_inv_table.csv")
+        )
 
 
 def setup_logging(loglevel):
@@ -235,8 +262,9 @@ def setup_logging(loglevel):
         minimum loglevel for emitting messages
     """
     logformat = "[%(asctime)s] %(levelname)s:%(name)s:%(message)s"
-    logging.basicConfig(level=loglevel, stream=sys.stdout,
-                        format=logformat, datefmt="%Y-%m-%d %H:%M:%S")
+    logging.basicConfig(
+        level=loglevel, stream=sys.stdout, format=logformat, datefmt="%Y-%m-%d %H:%M:%S"
+    )
 
 
 def parse_args(args):
@@ -253,71 +281,74 @@ def parse_args(args):
     argparse.Namespace : obj
         command line parameters namespace
     """
-    parser = argparse.ArgumentParser(
-        description="Kernel matrix inversion experiment.")
+    parser = argparse.ArgumentParser(description="Kernel matrix inversion experiment.")
     parser.add_argument(
         "-f",
         "--file",
         dest="file_data",
         help="filepath to the data",
         default="../../data/kernel_matrix_inversion/flight_delay_jan2020.zip",
-        type=str)
+        type=str,
+    )
     parser.add_argument(
         "-o",
         "--out",
         dest="file_out",
         help="output filepath",
         default="../tables/",
-        type=str)
+        type=str,
+    )
     parser.add_argument(
         "-k",
         "--kernels",
         dest="kernels",
         help="kernel functions of Gram matrices",
         default=["matern32", "matern52", "rbf"],
-        type=list)
+        type=list,
+    )
     parser.add_argument(
         "-cm",
         "--calib_methods",
         dest="calib_methods",
         help="calibration method to use",
         default=["none", "weightedmean", "gpkern", "noise", "spectrum"],
-        type=list)
+        type=list,
+    )
     parser.add_argument(
         "-n",
         "--n_samples",
         dest="n_samples",
         help="number of linear systems to draw",
         # default=10,
-        type=list)
+        type=list,
+    )
     parser.add_argument(
         "-d",
         "--datapoints",
         dest="datapoints",
         help="list of number of datapoints",
         default=[100, 1000, 10000],
-        type=list)
+        type=list,
+    )
     parser.add_argument(
-        "-s",
-        "--seed",
-        dest="seed",
-        default=0,
-        help="random seed",
-        type=int)
+        "-s", "--seed", dest="seed", default=0, help="random seed", type=int
+    )
     parser.add_argument(
         "-v",
         "--verbose",
         dest="loglevel",
         help="set loglevel to INFO",
         action="store_const",
-        const=logging.INFO)
+        const=logging.INFO,
+    )
     parser.add_argument(
         "-vv",
         "--very-verbose",
         dest="loglevel",
         help="set loglevel to DEBUG",
         action="store_const",
-        const=logging.DEBUG)
+        const=logging.DEBUG,
+    )
     return parser.parse_args(args)
 
 
@@ -328,5 +359,5 @@ def run():
     main(sys.argv[1:])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run()
