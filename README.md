@@ -40,12 +40,12 @@ To get started check out the [tutorials](https://probnum.readthedocs.io/en/lates
 
 ## Experiments
 
-You can reproduce all experiments and plots shown in the paper using ProbNum v0.1.1.
+You can reproduce all experiments and plots shown in the paper using [ProbNum v0.1.1](https://probnum.readthedocs.io/en/v0.1.1/).
 
 ```bash
-pip install probnum==0.1.1
 git clone git@github.com:JonathanWenger/probabilistic-linear-solvers-for-ml.git
 cd probabilistic-linear-solvers-for-ml
+pip install -r requirements.txt
 ```
 
 #### Plots and Illustrations
@@ -53,7 +53,6 @@ cd probabilistic-linear-solvers-for-ml
 Jupyter notebooks reproducing plots and illustrations are located in `./experiments/notebooks`. Simply install Jupyter and run the notebooks.
 
 ```bash
-pip install jupyter
 jupyter notebook
 ```
 
@@ -61,7 +60,8 @@ jupyter notebook
 Calibration experiments on kernel matrices generated from the [flight delay dataset](/data/kernel_matrix_inversion/flight_delay_jan2020.zip) can be run in the following way. 
 
 ```bash
-python experiments/scripts/kernel_matrix_inversion.py
+cd experiments/scripts
+python kernel_matrix_inversion.py
 ```
 
 All calibration strategies reduced overconfidence of the solver for the evaluated kernel matrices.
@@ -72,21 +72,20 @@ All calibration strategies reduced overconfidence of the solver for the evaluate
 
 #### Galerkin's Method
 
-To apply the probabilistic linear solver to a discretization of a partial differential equation begin by generating the mesh and resulting linear system via Galerkin's method. To do so install [FeNiCS](https://fenicsproject.org/) following these [instructions](https://fenicsproject.org/download/). On Ubuntu you can simply install from the package management system.
+To apply the probabilistic linear solver to a discretization of a partial differential equation run the associated Jupyter notebook in `./experiments/notebooks`.
+
+If you wish to regenerate the mesh and resulting linear system via Galerkin's method yourself, begin by installing [FeNiCS](https://fenicsproject.org/download). On Ubuntu you can simply install from the package management system.
 ```bash
 sudo apt-get install fenics
 ```
 
-You can now generate the coarse and fine meshes for the Dirichlet equation and associated linear systems via:
+You can now generate the coarse and fine meshes and associated linear systems for the Dirichlet equation via:
 
 ```bash
 cd experiments/scripts
 python poisson_pde.py -r 6
 python poisson_pde.py -r 128
 ```
-
-Now run the associated Jupyter notebook in `./experiments/notebooks` to apply the probabilistic linear solver to the resulting system.
-
 
 ## Citation
 

@@ -1,0 +1,7 @@
+numpy
+scipy
+pandas
+scikit-learn
+GPy==1.9.9
+probnum==0.1.1
+jupyter

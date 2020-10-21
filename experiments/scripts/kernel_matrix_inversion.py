@@ -208,7 +208,7 @@ def main(args):
                         # Compute test statistic testing for calibration
                         test_statistic = compute_test_statistic(
                             x_true=x_true,
-                            x_est=xhat.mean(),
+                            x_est=xhat.mean,
                             trace_solution_cov=info["trace_sol_cov"],
                         )
                     except np.linalg.LinAlgError:
