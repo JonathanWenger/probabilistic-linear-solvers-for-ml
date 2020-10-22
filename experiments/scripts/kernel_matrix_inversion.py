@@ -52,7 +52,7 @@ def load_dataset(file):
     return X_scaled
 
 
-def generate_linear_system(data, kernel, n_datapoints, sigma=10 ** -6):
+def generate_linear_system(data, kernel, n_datapoints, eps=10 ** -6):
     """
     Generate linear system with a kernel system matrix.
 
@@ -64,7 +64,7 @@ def generate_linear_system(data, kernel, n_datapoints, sigma=10 ** -6):
         String describing kernel to apply to dataset. One of `["rbf", "matern32", "matern52"]`
     n_datapoints : int
         Number of datapoints to sample.
-    sigma : float
+    eps : float
         Scalar for the regularization term added to the kernel matrix to ensure positive definiteness.
 
     Returns
@@ -91,7 +91,7 @@ def generate_linear_system(data, kernel, n_datapoints, sigma=10 ** -6):
     else:
         raise ValueError("Chosen kernel not recognized.")
     kern_mat = kern.K(X=X)
-    kern_mat = kern_mat + sigma * np.eye(kern_mat.shape[0])
+    kern_mat = kern_mat + eps * np.eye(kern_mat.shape[0])
     print(f"Matrix condition of {kernel} kernel matrix: {np.linalg.cond(kern_mat)}")
 
     # Sample random solution
@@ -172,9 +172,9 @@ def main(args):
 
                 # Sample linear problem
                 print(f"Sample linear problem {n + 1}/{n_samples[i]}.")
-                sigma = 10 ** -6 * d
+                eps = 10 ** -6 * d
                 x_true, kernel_mat, b = generate_linear_system(
-                    data=data, kernel=kernel, n_datapoints=d, sigma=sigma
+                    data=data, kernel=kernel, n_datapoints=d, eps=eps
                 )
 
                 # Compute spectrum
@@ -190,7 +190,7 @@ def main(args):
                     elif calib_method == "gpkern" or calib_method == "weightedmean":
                         calib_mode = calib_method
                     elif calib_method == "noise":
-                        calib_mode = sigma
+                        calib_mode = eps
                     elif calib_method == "spectrum" and eigvals is not None:
                         calib_mode = np.real_if_close(np.mean(eigvals[k_iter::]))
                     else:
@@ -302,17 +302,19 @@ def parse_args(args):
         "-k",
         "--kernels",
         dest="kernels",
+        nargs="*",  # 0 or more values expected => creates a list
         help="kernel functions of Gram matrices",
         default=["matern32", "matern52", "rbf"],
-        type=list,
+        type=str,
     )
     parser.add_argument(
         "-cm",
         "--calib_methods",
         dest="calib_methods",
+        nargs="*",  # 0 or more values expected => creates a list
         help="calibration method to use",
         default=["none", "weightedmean", "gpkern", "noise", "spectrum"],
-        type=list,
+        type=str,
     )
     parser.add_argument(
         "-n",
@@ -320,15 +322,16 @@ def parse_args(args):
         dest="n_samples",
         help="number of linear systems to draw",
         # default=10,
-        type=list,
+        type=int,
     )
     parser.add_argument(
         "-d",
         "--datapoints",
         dest="datapoints",
-        help="list of number of datapoints",
+        nargs="*",  # 0 or more values expected => creates a list
+        help="number of datapoints to compute kernel matrix for",
         default=[100, 1000, 10000],
-        type=list,
+        type=int,
     )
     parser.add_argument(
         "-s", "--seed", dest="seed", default=0, help="random seed", type=int
