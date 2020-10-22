@@ -3,5 +3,5 @@ scipy
 pandas
 scikit-learn
 GPy==1.9.9
-probnum==0.1.2
+git+git://github.com/probabilistic-numerics/probnum@178c2a736bf6c0f0d8fbcbd598fe3bd24eccf0e2#egg=probnum
 jupyter
