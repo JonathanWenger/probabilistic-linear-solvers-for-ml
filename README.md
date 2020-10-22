@@ -67,7 +67,7 @@ python kernel_matrix_inversion.py
 All calibration strategies reduced overconfidence of the solver for the evaluated kernel matrices.
 
 <p align="center">
-  <img src="https://github.com/JonathanWenger/probabilistic-linear-solvers-for-ml/blob/main/figures/calibration_experiment_table.png" alt="calibration_experiment" width="700"/>
+  <img src="https://github.com/JonathanWenger/probabilistic-linear-solvers-for-ml/blob/main/figures/calibration_experiment_table.png" alt="calibration_experiment" width="400"/>
 </p>
 
 #### Galerkin's Method
