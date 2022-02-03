@@ -24,7 +24,7 @@ An open-source implementation of our method is available as part of <a href="htt
 
 ---
 
-<a href="https://github.com/probabilistic-numerics/probnum"><img align="left" src="https://raw.githubusercontent.com/probabilistic-numerics/probnum/master/docs/source/img/pn_logo.png" alt="probabilistic numerics" width="120" style="padding-right: 5px; padding left: 5px;" title="Probabilistic Numerics in Python"/></a>**ProbNum implements probabilistic numerical methods in Python.** Such methods solve numerical problems from linear
+<a href="https://github.com/probabilistic-numerics/probnum"><img align="left" src="https://github.com/probabilistic-numerics/probnum/blob/37b51b163d55c195d05b38d2eeed19db997fe082/docs/source/assets/img/logo/probnum_logo.png" alt="probabilistic numerics" width="90" style="padding-right: 5px; padding left: 5px;" title="Probabilistic Numerics in Python"/></a>**ProbNum implements probabilistic numerical methods in Python.** Such methods solve numerical problems from linear
 algebra, optimization, quadrature and differential equations using _probabilistic inference_. This approach captures 
 uncertainty arising from _finite computational resources_ and _stochastic input_. 
 
