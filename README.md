@@ -33,14 +33,14 @@ uncertainty arising from _finite computational resources_ and _stochastic input_
 You can install ProbNum from the Python package index via:
 
 ```bash
-pip install probnum
+pip install probnum==0.1.21
 ``` 
 
 To get started check out the [tutorials](https://probnum.readthedocs.io/en/latest/tutorials/linear_algebra.html) on how to use the probabilistic linear solver within ProbNum and the [API documentation](https://probnum.readthedocs.io/en/latest/automod/probnum.linalg.problinsolve.html#probnum.linalg.problinsolve).
 
 ## Experiments
 
-You can reproduce all experiments and plots shown in the paper using [ProbNum v0.1.1](https://probnum.readthedocs.io/en/v0.1.1/).
+You can reproduce all experiments and plots shown in the paper using [ProbNum v0.1.21](https://probnum.readthedocs.io/en/v0.1.21/).
 
 ```bash
 git clone git@github.com:JonathanWenger/probabilistic-linear-solvers-for-ml.git
