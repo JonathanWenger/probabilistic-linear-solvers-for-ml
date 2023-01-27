@@ -1,7 +1,7 @@
 # Probabilistic Linear Solvers for Machine Learning
 
 [![arXiv](https://img.shields.io/static/v1?logo=arxiv&logoColor=white&label=Preprint&message=2010.09691&color=B31B1B)](https://arxiv.org/abs/2010.09691)
-[![NeurIPS](https://img.shields.io/static/v1?logo=material-design-icons&logoColor=white&label=NeurIPS&message=Proceedings&color=67458A)](https://papers.nips.cc/)
+[![NeurIPS](https://img.shields.io/static/v1?logo=material-design-icons&logoColor=white&label=NeurIPS&message=Proceedings&color=67458A)](https://papers.nips.cc/paper/2020/hash/4afd521d77158e02aed37e2274b90c9c-Abstract.html)
 [![ProbNum](https://img.shields.io/static/v1?logo=github&logoColor=white&label=ProbNum&message=Code&color=107d79)](https://github.com/probabilistic-numerics/probnum)
 [![ProbNum](https://img.shields.io/static/v1?message=Docs&logo=read%20the%20docs&logoColor=white&label=ProbNum&color=blue)](https://probnum.readthedocs.io)
 
@@ -24,7 +24,7 @@ An open-source implementation of our method is available as part of <a href="htt
 
 ---
 
-<a href="https://github.com/probabilistic-numerics/probnum"><img align="left" src="https://raw.githubusercontent.com/probabilistic-numerics/probnum/master/docs/source/img/pn_logo.png" alt="probabilistic numerics" width="120" style="padding-right: 5px; padding left: 5px;" title="Probabilistic Numerics in Python"/></a>**ProbNum implements probabilistic numerical methods in Python.** Such methods solve numerical problems from linear
+<a href="https://github.com/probabilistic-numerics/probnum"><img align="left" src="https://github.com/probabilistic-numerics/probnum/blob/37b51b163d55c195d05b38d2eeed19db997fe082/docs/source/assets/img/logo/probnum_logo.png" alt="probabilistic numerics" width="90" style="padding-right: 5px; padding left: 5px;" title="Probabilistic Numerics in Python"/></a>**ProbNum implements probabilistic numerical methods in Python.** Such methods solve numerical problems from linear
 algebra, optimization, quadrature and differential equations using _probabilistic inference_. This approach captures 
 uncertainty arising from _finite computational resources_ and _stochastic input_. 
 
